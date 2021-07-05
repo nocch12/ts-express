@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./build/bin/www",
+    "start": "npm run build && node ./build/bin/www",
+    "build": "tsc",
     "watch": "tsc-watch --onSuccess \"npm start\""
   },
   "dependencies": {
