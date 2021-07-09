@@ -1,9 +1,9 @@
 import { User, UserIdType } from './User';
 
-export interface UserRepositoryInterface {
-  findAll(): Promise<User[]>;
+export abstract class UserRepositoryInterface {
+  abstract findAll(): Promise<User[]>;
 
-  find(id: UserIdType): Promise<User>;
+  abstract find(id: UserIdType): Promise<User>;
 
-  save(user: User): Promise<User|null>; 
+  abstract save(user: User): Promise<User|null>; 
 }

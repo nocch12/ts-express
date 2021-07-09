@@ -1,7 +1,7 @@
 import { User, UserIdType } from '../../domain/user/User';
 import { UserRepositoryInterface } from '../../domain/user/UserRepositoryInterface';
 
-export class UserRepositoryDummy implements UserRepositoryInterface {
+export class UserRepositoryDummy extends UserRepositoryInterface {
   findAll() {
     return new Promise<User[]>((resolve) =>
       resolve([
